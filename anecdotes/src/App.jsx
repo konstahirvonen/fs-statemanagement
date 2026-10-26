@@ -1,31 +1,21 @@
-import { useAnecdotes } from "./store"
+import { useEffect } from "react"
+import AnecdoteForm from "./components/AnecdoteForm"
+import AnecdoteList from "./components/AnecdoteList"
+import { useAnecdoteActions } from "./store"
 
 const App = () => {
-  const anecdotes = useAnecdotes()
 
-  const vote = (id) => {
-    console.log("vote", id)
-  }
+  const { initialize } = useAnecdoteActions()
+
+  useEffect(() => {
+    initialize()
+  }, [initialize])
 
   return (
     <div>
-      <h2>Anecdotes</h2>
-      {anecdotes.map((anecdote) => (
-        <div key={anecdote.id}>
-          <div>{anecdote.content}</div>
-          <div>
-            has {anecdote.votes}
-            <button onClick={() => vote(anecdote.id)}>vote</button>
-          </div>
-        </div>
-      ))}
+      <AnecdoteList />
       <h2>create new</h2>
-      <form>
-        <div>
-          <input data-testid="new" />
-        </div>
-        <button>create</button>
-      </form>
+      <AnecdoteForm />
     </div>
   )
 }

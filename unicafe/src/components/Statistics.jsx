@@ -1,4 +1,4 @@
-import useCounterStore from "./useCounterStore"
+import useCounterStore from "../store/useCounterStore"
 
 const Statistics = () => {
   const good = useCounterStore(state => state.good)

@@ -1,4 +1,4 @@
-import useCounterStore from "./useCounterStore"
+import useCounterStore from "../store/useCounterStore"
 
 const Buttons = () => {
   const increment = useCounterStore(state => state.increment)
