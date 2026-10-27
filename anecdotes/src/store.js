@@ -37,12 +37,27 @@ const useAnecdoteStore = create((set, get) => ({
       const newAnecdote = await anecdoteService.createNew(content)
       set(state => ({ anecdotes: state.anecdotes.concat(newAnecdote) }))
     },
+    remove: async (id) => {
+      await anecdoteService.remove(id)
+      set(state => ({ 
+        anecdotes: state.anecdotes.filter(a => a.id !== id)
+      }))
+    }
+    ,
     setFilter: value => set(() => ({filter: value})),
     initialize: async () => {
       const anecdotes = await anecdoteService.getAll()
       set(() => ({ anecdotes }))
     }
   },
+}))
+
+const useNotificationStore = create((set) => ({
+  notification: "",
+  actions: {
+    setNotification: (message) => set({ notification: message }),
+    clearNotification: () => set({ notification: "" }),
+  }
 }))
 
 export const useAnecdotes = () => {
@@ -57,3 +72,5 @@ export const useAnecdotes = () => {
 }
 export const useFilter = () => useAnecdoteStore((state) => state.filter)
 export const useAnecdoteActions = () => useAnecdoteStore((state) => state.actions)
+export const useNotification = () => useNotificationStore((state) => state.notification)
+export const useNotificationActions = () => useNotificationStore((state) => state.actions)
