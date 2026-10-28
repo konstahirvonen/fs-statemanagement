@@ -1,16 +1,20 @@
+import { useAnecdotes } from "../hooks/useAnecdotes"
+
 const AnecdoteForm = () => {
-  const onCreate = (event) => {
-    event.preventDefault()
-    const content = event.target.anecdote.value
-    event.target.reset()
-    console.log('new anecdote')
+  const { addAnecdote: addAnecdoteToServer } = useAnecdotes()
+
+  const addAnecdote = async (e) => {
+    e.preventDefault()
+    const content = e.target.anecdote.value
+    e.target.reset()
+    addAnecdoteToServer(content)
   }
 
   return (
     <div>
       <h3>create new</h3>
-      <form onSubmit={onCreate}>
-        <input name="anecdote" />
+      <form onSubmit={addAnecdote}>
+        <input name="anecdote" minLength={5} />
         <button type="submit">create</button>
       </form>
     </div>
