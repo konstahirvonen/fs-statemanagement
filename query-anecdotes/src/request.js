@@ -10,7 +10,11 @@ export const getAnecdotes = async () => {
 }
 
 export const createAnecdote = async (newAnecdote) => {
-    const options ={
+    if (newAnecdote.content.length < 5) {
+        throw new Error("too short anecdote, must have 5 or more")
+    }
+
+    const options = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newAnecdote)

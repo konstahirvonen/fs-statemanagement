@@ -1,69 +1,29 @@
 {
   "anecdotes": [
     {
-      "content": "If it hurts, do it more often",
-      "id": "47145",
+      "id": "ddac6499-32ef-4ea0-89ac-3acc3f698b49",
+      "content": "Make it work, then make it fast",
       "votes": 0
     },
     {
-      "content": "Adding manpower to a late software project makes it later!",
-      "id": "21149",
-      "votes": 0
+      "id": "86d37e70-931d-4dc5-bfb7-b0e2c0fb0e83",
+      "content": "There are two hard things in computer science",
+      "votes": 3
     },
     {
-      "content": "The first 90 percent of the code accounts for the first 90 percent of the development time...The remaining 10 percent of the code accounts for the other 90 percent of the development time.",
-      "id": "69581",
-      "votes": 0
+      "id": "bb6df2f8-9b77-45db-ae36-deb9e366de15",
+      "content": "Untested code is broken code",
+      "votes": 3
     },
     {
-      "content": "Any fool can write code that a computer can understand. Good programmers write code that humans can understand.",
-      "id": "36975",
-      "votes": 0
+      "id": "4611e4d8-5960-4106-9da3-d36c9469cbcb",
+      "content": "Simplicity is the ultimate sophistication",
+      "votes": 5
     },
     {
-      "content": "Premature optimization is the root of all evil.",
-      "id": "25170",
-      "votes": 0
-    },
-    {
-      "content": "Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.",
-      "id": "98312",
-      "votes": 0
-    },
-    {
-      "content": "Test anecdote",
-      "votes": 1,
-      "id": "31202327-0f48-4416-822f-5d4e9f44b91b"
-    },
-    {
-      "content": "fsfafa",
-      "votes": 4,
-      "id": "406beaf6-4df4-4db2-9d53-de82758cac2b"
-    },
-    {
-      "content": "Test anecdote",
-      "votes": 0,
-      "id": "567df93b-0486-45f8-bb9e-8d094ab0d8b1"
-    },
-    {
-      "content": "anecdote",
-      "votes": 1,
-      "id": "f897f2a5-c4bb-4df1-9f87-4795d9865ed2"
-    },
-    {
-      "content": "Test anecdote",
-      "votes": 2,
-      "id": "80b8b4ae-b44b-409c-b669-81d3cbc5ee8e"
-    },
-    {
-      "content": "fsfafa",
-      "votes": 0,
-      "id": "171aa241-40ad-4463-9f2a-0ef686cc5f25"
-    },
-    {
-      "content": "fafafa",
-      "votes": 0,
-      "id": "1f25b603-f9ac-4914-a680-cd056c218a96"
+      "id": "ae2cf518-3f06-45ff-8c2b-ee73401cee06",
+      "content": "Real artists ship code",
+      "votes": 7
     }
   ]
 }
